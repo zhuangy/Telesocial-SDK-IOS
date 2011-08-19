@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		188C2C9413FEAFF300B29F22 /* itunesArtwork in Resources */ = {isa = PBXBuildFile; fileRef = 188C2C9113FEAFF300B29F22 /* itunesArtwork */; };
 		188C2C9513FEAFF300B29F22 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 188C2C9213FEAFF300B29F22 /* icon.png */; };
 		188C2C9613FEAFF300B29F22 /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 188C2C9313FEAFF300B29F22 /* icon@2x.png */; };
 		188C2CA913FEB03200B29F22 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 188C2C9713FEB03200B29F22 /* MainWindow.xib */; };
@@ -32,7 +31,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		188C2C9113FEAFF300B29F22 /* itunesArtwork */ = {isa = PBXFileReference; lastKnownFileType = file; path = itunesArtwork; sourceTree = "<group>"; };
 		188C2C9213FEAFF300B29F22 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		188C2C9313FEAFF300B29F22 /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@2x.png"; sourceTree = "<group>"; };
 		188C2C9713FEB03200B29F22 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
@@ -178,7 +176,6 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				188C2C9113FEAFF300B29F22 /* itunesArtwork */,
 				188C2C9213FEAFF300B29F22 /* icon.png */,
 				188C2C9313FEAFF300B29F22 /* icon@2x.png */,
 				8D1107310486CEB800E47090 /* TelesocialSDKDemo-Info.plist */,
@@ -245,7 +242,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				188C2C9413FEAFF300B29F22 /* itunesArtwork in Resources */,
 				188C2C9513FEAFF300B29F22 /* icon.png in Resources */,
 				188C2C9613FEAFF300B29F22 /* icon@2x.png in Resources */,
 				188C2CA913FEB03200B29F22 /* MainWindow.xib in Resources */,

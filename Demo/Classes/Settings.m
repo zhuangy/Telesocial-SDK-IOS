@@ -41,7 +41,7 @@ static Settings* sharedSettings;
 }
 
 - (NSString *) serviceUrl {
-	return [self valueForKey:kBMServiceUrlKey defaultValue:@"http://api4.Telesocial.com"];
+	return [self valueForKey:kBMServiceUrlKey defaultValue:@"http://api4.bitmouth.com"];
 }
 
 - (void) setServiceUrl:(NSString *) value{
@@ -65,7 +65,7 @@ static Settings* sharedSettings;
 }
 
 - (NSArray*) loadMediaList {
-	return [self valueForKey:kBMMediaListKey defaultValue:[NSArray arrayWithObjects:@"media 01", @"media 02", nil]];
+	return [self valueForKey:kBMMediaListKey defaultValue:[NSArray array]];
 }
 
 - (void) saveMediaList:(NSArray *)mediaList {
@@ -73,7 +73,7 @@ static Settings* sharedSettings;
 }
 
 - (NSArray *) loadConferenceList {
-	return [self valueForKey:kBMConferenceListKey defaultValue:[NSArray arrayWithObjects:@"conf 01", @"conf 02", @"0bf4d728700c4784bde2b114de705eef", nil]];	
+	return [self valueForKey:kBMConferenceListKey defaultValue:[NSArray array]];	
 }
 
 - (void) saveConferenceList:(NSArray *)conferenceList {

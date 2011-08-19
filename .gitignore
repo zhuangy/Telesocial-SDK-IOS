@@ -1,6 +1,7 @@
 build
-BitmouthSDK.xcodeproj/project.xcworkspace
-BitmouthSDK.xcodeproj/xcuserdata
+project.xcworkspace
+xcuserdata
 *.mode1v3
 *.pbxuser
+.DS_Store
 

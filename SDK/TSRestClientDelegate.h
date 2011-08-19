@@ -1,5 +1,5 @@
 //
-//  BMRestClientDelegate.h
+//  TSRestClientDelegate.h
 //  BitmouthSDK
 //
 //  Created by Anton Minin on 8/2/11.
@@ -18,7 +18,7 @@
 @optional
 
 /**
- Sent when the client has finished executing BMRestClient::registerNetworkId:phone: call.
+ Sent when the client has finished executing TSRestClient::registerNetworkId:phone: call.
  
  @param client		The client sending the message. 
  @param networkId   ID of the network or nil, if registration has failed.
@@ -31,7 +31,7 @@
 		 withStatus:(TSStatus*) status;
 
 /**
- Sent when the client has finished executing BMRestClient::createConference:record: call.
+ Sent when the client has finished executing TSRestClient::createConference:record: call.
  
  @param client			The client sending the message.
  @param conferenceId	The ID of the newly created conference.
@@ -43,7 +43,7 @@
 		 withStatus:(TSStatus*) status;
 
 /**
- Sent when the client has finished executing BMRestClient::createMedia call.
+ Sent when the client has finished executing TSRestClient::createMedia call.
 
  @param client			The client sending the message.
  @param mediaInfo		Information about newly created media item.
@@ -56,7 +56,7 @@
          withStatus:(TSStatus*) status;
 
 /**
- Sent when the client has finished executing BMRestClient::recordMedia:network: call.
+ Sent when the client has finished executing TSRestClient::recordMedia:network: call.
  
  @param client			The client sending the message.
  @param mediaInfo		The media used for recording.
@@ -69,7 +69,7 @@
 		 withStatus:(TSStatus*) status;
 
 /**
- Sent when the client has finished executing BMRestClient::blastMedia:network: call.
+ Sent when the client has finished executing TSRestClient::blastMedia:network: call.
  
  @param client			The client sending the message.
  @param mediaInfo		The media used in the blast.
@@ -82,7 +82,7 @@
 		 withStatus:(TSStatus*) status;
 
 /**
- Sent when the client has finished executing BMRestClient::getMediaStatus: call.
+ Sent when the client has finished executing TSRestClient::getMediaStatus: call.
 
  @param client			The client sending the message.
  @param status			Status of the operation.<br><br>
@@ -94,7 +94,7 @@
 - (void) restClient:(TSRestClient*) client didReceiveStatus:(TSStatus*) status forMedia:(TSMediaInfo*) mediaInfo;
 
 /**
- Sent when the client has finished executing BMRestClient::addNetworks:toConference: call.
+ Sent when the client has finished executing TSRestClient::addNetworks:toConference: call.
  
  @param client			The client sending the message.
  @param conferenceId	The ID of the conference.
@@ -107,7 +107,7 @@
 		 withStatus:(TSStatus*) status;
 
 /**
- Sent when the client has finished executing BMRestClient::requestUploadGrantForMedia: call.
+ Sent when the client has finished executing TSRestClient::requestUploadGrantForMedia: call.
 
  @param client			The client sending the message.
  @param grantId			A grant code that may be used to perform a single file upload. The grant code is
@@ -120,7 +120,7 @@
 		 withStatus:(TSStatus*) status;
 
 /**
- Sent when the client has finished executing BMRestClient::removeMedia: call.
+ Sent when the client has finished executing TSRestClient::removeMedia: call.
  
  @param client			The client sending the message.
  @param mediaId			The ID of the media the service attempted to remove.
@@ -133,7 +133,7 @@
 		 withStatus:(TSStatus*) status;
 
 /**
- Sent when the client has finished executing BMRestClient::closeConference: call.
+ Sent when the client has finished executing TSRestClient::closeConference: call.
  
  @param client			The client sending the message.
  @param conferenceId	The ID of the conference the service attempted to close.
@@ -146,7 +146,7 @@
 		 withStatus:(TSStatus*) status;
 
 /**
- Sent when the client has finished executing BMRestClient::hangupNetwork:inConference: call.
+ Sent when the client has finished executing TSRestClient::hangupNetwork:inConference: call.
  
  @param client			The client sending the message.
  @param networkId		The ID of the network the service attempted to hangup.
@@ -162,7 +162,7 @@
      inConferenceId:(NSString*) conferenceId withStatus:(TSStatus*) status;
 
 /**
- Sent when the client has finished executing BMRestClient::moveNetwork:fromConference:toConference: call.
+ Sent when the client has finished executing TSRestClient::moveNetwork:fromConference:toConference: call.
  
  @param client			The client sending the message.
  @param status			Status of the operation.<br><br> 
@@ -174,7 +174,7 @@
 - (void) restClient:(TSRestClient*) client didMoveWithStatus:(TSStatus*) status;
 
 /**
- Sent when the client has finished executing BMRestClient::setMute:forNetwork:inConference: call.
+ Sent when the client has finished executing TSRestClient::setMute:forNetwork:inConference: call.
 
  @param client			The client sending the message.
  @param status			Status of the operation.<br><br> 
@@ -187,7 +187,7 @@
 - (void) restClient:(TSRestClient*) client didMuteWithStatus:(TSStatus*) status;
 
 /**
- Sent when the client has finished executing BMRestClient::getAPIVersion call.
+ Sent when the client has finished executing TSRestClient::getAPIVersion call.
  
  @param client			The client sending the message.
  @param versionString	The API version string in xx.yy.zz format.
@@ -198,16 +198,16 @@
 			 status:(TSStatus*) status;
 
 /**
- Sent when the client has finished executing BMRestClient::getRegistrationStatus:checkRelated: call.
+ Sent when the client has finished executing TSRestClient::getRegistrationStatus:checkRelated: call.
  
  @param client		The client sending the message.
  @param	networkId	The ID of the network that has been checked.
  @param status		The outome of the operation.<br><br>
-	If <i>checkRelated</i> was set to YES in the BMRestClient::getRegistrationStatus:checkRelated: call:<br>
+	If <i>checkRelated</i> was set to YES in the TSRestClient::getRegistrationStatus:checkRelated: call:<br>
 	kBMStatusOk (200)			- The registrant with the specified network ID exists and is associated with the application<br>
 	kBMStatusUnauthorized (401)	- The network ID exists but it not associated with the specified application.<br>
 	kBMStatusNotFound (404)		- The network is not registered.<br><br>
-	If <i>checkRelated</i> was set to NO in the BMRestClient::getRegistrationStatus:checkRelated: call:<br>
+	If <i>checkRelated</i> was set to NO in the TSRestClient::getRegistrationStatus:checkRelated: call:<br>
 	kBMStatusOk (200)			- The registrant with the specified network ID exists.<br>
 	kBMStatusNotFound (404)		- The registrant with the specified network ID does not exist.<br><br>
  */

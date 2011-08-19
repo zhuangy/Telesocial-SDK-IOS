@@ -1,5 +1,5 @@
 //
-//  BMRestOperation.m
+//  TSRestOperation.m
 //  BitmouthSDK
 //
 //  Created by Anton Minin on 8/4/11.

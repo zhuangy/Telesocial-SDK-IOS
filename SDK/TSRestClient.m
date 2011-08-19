@@ -1,5 +1,5 @@
 //
-//  BMRestClient.m
+//  TSRestClient.m
 //  BitmouthSDK
 //
 //  Created by Anton Minin on 8/2/11.

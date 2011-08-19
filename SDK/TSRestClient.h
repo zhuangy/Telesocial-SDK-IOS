@@ -1,5 +1,5 @@
 //
-//  BMRestClient.h
+//  TSRestClient.h
 //  BitmouthSDK
 //
 //  Created by Anton Minin on 8/2/11.
@@ -30,7 +30,7 @@
  @param checkRelated	If YES, then check whether the supplied network ID is associated with a particular application.
  If NO, only checks if the network ID is registered with the Bitmouth system.
  
- @see BMRestClientDelegate::restClient:didReceiveStatus:forNetwork: 
+ @see TSRestClientDelegate::restClient:didReceiveStatus:forNetwork: 
  */
 - (void) getRegistrationStatus:(NSString*) networkId checkRelated:(BOOL) checkRelated;
 
@@ -42,7 +42,7 @@
  @param networkId	The ID of the network to be registered.
  @param phone		The phone number to relate to the network ID.
  
- @see BMRestClientDelegate::restClient:didRegisterNetworkId:withStatus:
+ @see TSRestClientDelegate::restClient:didRegisterNetworkId:withStatus:
  */
 - (void) registerNetworkId:(NSString*) networkId phone:(NSString*) phone;
 
@@ -57,7 +57,7 @@
 					When the conference ends, an audio file will be produced that is mapped to this
 					media id. If the parameter is <i>nil</i> then no recording will be performed.
  
- @see BMRestClientDelegate::restClient:didCreateConferenceId:withStatus:
+ @see TSRestClientDelegate::restClient:didCreateConferenceId:withStatus:
  */
 - (void) createConferenceWithNetwork:(NSString*) networkId greetingId:(NSString *)greetingId recordingId:(NSString *)recordingId ;
 
@@ -66,7 +66,7 @@
  This method returns a Media ID associated with current application that can be 
  used with subsequent "record" and "blast" methods.
  
- @see BMRestClientDelegate::restClient:didCreateMedia:withStatus:
+ @see TSRestClientDelegate::restClient:didCreateMedia:withStatus:
  */
 - (void) createMedia;
 
@@ -79,7 +79,7 @@
  @param mediaId		The ID of the media to be used in recording.
  @param networkId	The network ID to call.
  
- @see BMRestClientDelegate::restClient:didRecordMedia:withStatus:
+ @see TSRestClientDelegate::restClient:didRecordMedia:withStatus:
  */
 - (void) recordMedia:(NSString*) mediaId network:(NSString*) networkId;
 
@@ -90,7 +90,7 @@
  @param mediaId		The ID of the media to be played.
  @param networkID	The ID of the network to call.
  
- @see BMRestClientDelegate::restClient:didBlastMedia:withStatus:
+ @see TSRestClientDelegate::restClient:didBlastMedia:withStatus:
  */
 - (void) blastMedia:(NSString*) mediaId network:(NSString*) networkId;
 
@@ -99,7 +99,7 @@
  
  @param mediaId		The ID of the media to get status of.
  
- @see BMRestClientDelegate::restClient:didReceiveStatus:forMedia:
+ @see TSRestClientDelegate::restClient:didReceiveStatus:forMedia:
  */
 - (void) getMediaStatus:(NSString*) mediaId;
 
@@ -112,7 +112,7 @@
 						when they answer their phones. If this parameter is <i>nil</i>, the default 
 						greeting is used.
  
- @see BMRestClientDelegate::restClient:didAddNetworksToConference:withStatus:
+ @see TSRestClientDelegate::restClient:didAddNetworksToConference:withStatus:
  */
 - (void) addNetworks:(NSArray*) networks toConference:(NSString*) conferenceId greetingId:(NSString*) greetingId;
 
@@ -124,7 +124,7 @@
  
  @param mediaId		The ID of the media which is associated with this upload request.
  
- @see BMRestClientDelegate::restClient:didReceiveUploadGrant:withStatus:
+ @see TSRestClientDelegate::restClient:didReceiveUploadGrant:withStatus:
  */
 - (void) requestUploadGrantForMedia:(NSString*) mediaId;
 
@@ -133,7 +133,7 @@
  
  @param mediaId		The ID of the media to remove
  
- @see BMRestClientDelegate::restClient:didRemoveMediaId:withStatus:
+ @see TSRestClientDelegate::restClient:didRemoveMediaId:withStatus:
  */
 - (void) removeMedia:(NSString*) mediaId;
 
@@ -142,7 +142,7 @@
  
  @param conferenceId	The ID of the conference to terminate.
  
- @see BMRestClientDelegate::restClient:didCloseConferenceId:withStatus:
+ @see TSRestClientDelegate::restClient:didCloseConferenceId:withStatus:
  */
 - (void) closeConference:(NSString*) conferenceId;
 
@@ -152,7 +152,7 @@
  @param networkId		The ID of the network to terminate.
  @param conferenceId	The ID of the conference to operate on.
  
- @see BMRestClientDelegate::restClient:didHangupNetworkId:inConferenceId:withStatus:
+ @see TSRestClientDelegate::restClient:didHangupNetworkId:inConferenceId:withStatus:
  */
 - (void) hangupNetwork:(NSString*) networkId inConference:(NSString*) conferenceId;
 
@@ -163,7 +163,7 @@
  @param fromConferenceId	The ID of the conference to move the network from.
  @param toConferenceId		The ID of the conference to move the network to.
  
- @see BMRestClientDelegate::restClient:didMoveWithStatus:
+ @see TSRestClientDelegate::restClient:didMoveWithStatus:
  */
 - (void) moveNetwork:(NSString*) networkId fromConference:(NSString*) fromConferenceId toConference:(NSString*) toConferenceId;
 
@@ -174,7 +174,7 @@
  @param networkId		The ID of the network associated with the specified call leg.
  @param conferenceId	The ID of the conference to operate on.
  
- @see BMRestClientDelegate::restClient:didMuteWithStatus:
+ @see TSRestClientDelegate::restClient:didMuteWithStatus:
  */
 - (void) setMute:(BOOL) mute forNetwork:(NSString*)networkId inConference:(NSString*) conferenceId;
 
@@ -182,7 +182,7 @@
 /**
  This method returns the API version in xx.yy.zz format.
  
- @see BMRestClientDelegate::restClient:didReceiveApiVersion:status:
+ @see TSRestClientDelegate::restClient:didReceiveApiVersion:status:
  */
 - (void) getAPIVersion;
 
@@ -195,7 +195,7 @@
 
 
 /**
- Returns the default BMRestClient object for the system. This will always return the same instane if the client.
+ Returns the default TSRestClient object for the system. This will always return the same instane if the client.
  
  @returns The default BRRestClient object for the system.
  */
