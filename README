@@ -1,0 +1,14 @@
+INSTALLATION INSTRUCTIONS
+-------------------------
+
+1. In the finder, drag TelesocialSDK  into project's file folder. 
+
+2. Now add it to your project [ Project » Add to project » TelesocialSDK ] 
+Choose "Recursively create groups for any added folders" 
+
+3. Include "TelesocialSDK.h" file in your source code files.
+
+You're done! That's all you need to begin making calls to the Telesocial API.
+Sample call would be: [[TSRestClient defaultClient] getAPIVersion];
+
+Please check TSRestClient class documentation for further information.
