@@ -65,7 +65,7 @@
 	self.response = aResponse;
 	self.error = anError;
 
-	NSLog(@"response error:%@, status code: %d, body: %@", [error description], [response statusCode], dataString);
+//	NSLog(@"response error:%@, status code: %d, body: %@", [error description], [response statusCode], dataString);
 	
 	if (error) {
 		self.status = [TSStatus statusWithCode:kBMStatusServiceUnavaialble message:[error localizedDescription]];

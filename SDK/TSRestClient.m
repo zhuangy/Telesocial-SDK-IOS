@@ -120,12 +120,15 @@ static TSRestClient* defaultClient;
 	// urlencode POST parameters
 	NSString* postParamsString = [self encodedParamsFromDictionary:postParams];
 	
+    
+/*    
 	if (postParamsString != nil) {
 		NSLog(@"curl -d \"%@\" %@\n", postParamsString, urlString);
 	} else {
 		NSLog(@"curl %@\n", urlString);		
 	}
-
+*/
+    
 	uint postDataLength = 0;
 	NSData* postData = nil;
 	
