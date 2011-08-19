@@ -1,0 +1,368 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		188C2C9413FEAFF300B29F22 /* itunesArtwork in Resources */ = {isa = PBXBuildFile; fileRef = 188C2C9113FEAFF300B29F22 /* itunesArtwork */; };
+		188C2C9513FEAFF300B29F22 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 188C2C9213FEAFF300B29F22 /* icon.png */; };
+		188C2C9613FEAFF300B29F22 /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 188C2C9313FEAFF300B29F22 /* icon@2x.png */; };
+		188C2CA913FEB03200B29F22 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 188C2C9713FEB03200B29F22 /* MainWindow.xib */; };
+		188C2CAA13FEB03200B29F22 /* TelesocialSDKDemoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 188C2C9813FEB03200B29F22 /* TelesocialSDKDemoViewController.xib */; };
+		188C2CAB13FEB03200B29F22 /* TelesocialSDKDemoAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 188C2C9A13FEB03200B29F22 /* TelesocialSDKDemoAppDelegate.m */; };
+		188C2CAC13FEB03200B29F22 /* TelesocialSDKDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 188C2C9C13FEB03200B29F22 /* TelesocialSDKDemoViewController.m */; };
+		188C2CAD13FEB03200B29F22 /* NetworkListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 188C2C9E13FEB03200B29F22 /* NetworkListViewController.m */; };
+		188C2CAE13FEB03200B29F22 /* NetworkDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 188C2CA013FEB03200B29F22 /* NetworkDetailViewController.m */; };
+		188C2CAF13FEB03200B29F22 /* MediaListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 188C2CA213FEB03200B29F22 /* MediaListViewController.m */; };
+		188C2CB013FEB03200B29F22 /* MediaDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 188C2CA413FEB03200B29F22 /* MediaDetailViewController.m */; };
+		188C2CB113FEB03200B29F22 /* ConferenceListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 188C2CA613FEB03200B29F22 /* ConferenceListViewController.m */; };
+		188C2CB213FEB03200B29F22 /* ConferenceDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 188C2CA813FEB03200B29F22 /* ConferenceDetailViewController.m */; };
+		18CD05FE13FEB1CE007FC6BF /* libTelesocialSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 18CD05F813FEB1CE007FC6BF /* libTelesocialSDK.a */; };
+		18CD061513FEB1F0007FC6BF /* Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CD060E13FEB1F0007FC6BF /* Utility.m */; };
+		18CD061613FEB1F0007FC6BF /* Settings.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CD061013FEB1F0007FC6BF /* Settings.m */; };
+		18CD061713FEB1F0007FC6BF /* TextEntryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CD061213FEB1F0007FC6BF /* TextEntryViewController.m */; };
+		18CD061813FEB1F0007FC6BF /* ItemPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CD061413FEB1F0007FC6BF /* ItemPickerViewController.m */; };
+		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
+		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
+		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
+		288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		188C2C9113FEAFF300B29F22 /* itunesArtwork */ = {isa = PBXFileReference; lastKnownFileType = file; path = itunesArtwork; sourceTree = "<group>"; };
+		188C2C9213FEAFF300B29F22 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		188C2C9313FEAFF300B29F22 /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@2x.png"; sourceTree = "<group>"; };
+		188C2C9713FEB03200B29F22 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
+		188C2C9813FEB03200B29F22 /* TelesocialSDKDemoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TelesocialSDKDemoViewController.xib; sourceTree = "<group>"; };
+		188C2C9913FEB03200B29F22 /* TelesocialSDKDemoAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TelesocialSDKDemoAppDelegate.h; sourceTree = "<group>"; };
+		188C2C9A13FEB03200B29F22 /* TelesocialSDKDemoAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TelesocialSDKDemoAppDelegate.m; sourceTree = "<group>"; };
+		188C2C9B13FEB03200B29F22 /* TelesocialSDKDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TelesocialSDKDemoViewController.h; sourceTree = "<group>"; };
+		188C2C9C13FEB03200B29F22 /* TelesocialSDKDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TelesocialSDKDemoViewController.m; sourceTree = "<group>"; };
+		188C2C9D13FEB03200B29F22 /* NetworkListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkListViewController.h; sourceTree = "<group>"; };
+		188C2C9E13FEB03200B29F22 /* NetworkListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkListViewController.m; sourceTree = "<group>"; };
+		188C2C9F13FEB03200B29F22 /* NetworkDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkDetailViewController.h; sourceTree = "<group>"; };
+		188C2CA013FEB03200B29F22 /* NetworkDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkDetailViewController.m; sourceTree = "<group>"; };
+		188C2CA113FEB03200B29F22 /* MediaListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MediaListViewController.h; sourceTree = "<group>"; };
+		188C2CA213FEB03200B29F22 /* MediaListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MediaListViewController.m; sourceTree = "<group>"; };
+		188C2CA313FEB03200B29F22 /* MediaDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MediaDetailViewController.h; sourceTree = "<group>"; };
+		188C2CA413FEB03200B29F22 /* MediaDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MediaDetailViewController.m; sourceTree = "<group>"; };
+		188C2CA513FEB03200B29F22 /* ConferenceListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConferenceListViewController.h; sourceTree = "<group>"; };
+		188C2CA613FEB03200B29F22 /* ConferenceListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConferenceListViewController.m; sourceTree = "<group>"; };
+		188C2CA713FEB03200B29F22 /* ConferenceDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConferenceDetailViewController.h; sourceTree = "<group>"; };
+		188C2CA813FEB03200B29F22 /* ConferenceDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConferenceDetailViewController.m; sourceTree = "<group>"; };
+		18CD05F813FEB1CE007FC6BF /* libTelesocialSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTelesocialSDK.a; sourceTree = "<group>"; };
+		18CD05F913FEB1CE007FC6BF /* TelesocialSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TelesocialSDK.h; sourceTree = "<group>"; };
+		18CD05FA13FEB1CE007FC6BF /* TSMediaInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSMediaInfo.h; sourceTree = "<group>"; };
+		18CD05FB13FEB1CE007FC6BF /* TSRestClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSRestClient.h; sourceTree = "<group>"; };
+		18CD05FC13FEB1CE007FC6BF /* TSRestClientDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSRestClientDelegate.h; sourceTree = "<group>"; };
+		18CD05FD13FEB1CE007FC6BF /* TSStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSStatus.h; sourceTree = "<group>"; };
+		18CD060D13FEB1F0007FC6BF /* Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utility.h; sourceTree = "<group>"; };
+		18CD060E13FEB1F0007FC6BF /* Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utility.m; sourceTree = "<group>"; };
+		18CD060F13FEB1F0007FC6BF /* Settings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Settings.h; sourceTree = "<group>"; };
+		18CD061013FEB1F0007FC6BF /* Settings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Settings.m; sourceTree = "<group>"; };
+		18CD061113FEB1F0007FC6BF /* TextEntryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextEntryViewController.h; sourceTree = "<group>"; };
+		18CD061213FEB1F0007FC6BF /* TextEntryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextEntryViewController.m; sourceTree = "<group>"; };
+		18CD061313FEB1F0007FC6BF /* ItemPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemPickerViewController.h; sourceTree = "<group>"; };
+		18CD061413FEB1F0007FC6BF /* ItemPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemPickerViewController.m; sourceTree = "<group>"; };
+		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1D6058910D05DD3D006BFB54 /* TelesocialSDKDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TelesocialSDKDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		288765A40DF7441C002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		32CA4F630368D1EE00C91783 /* TelesocialSDKDemo_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TelesocialSDKDemo_Prefix.pch; sourceTree = "<group>"; };
+		8D1107310486CEB800E47090 /* TelesocialSDKDemo-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "TelesocialSDKDemo-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1D60588F0D05DD3D006BFB54 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
+				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
+				288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */,
+				18CD05FE13FEB1CE007FC6BF /* libTelesocialSDK.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				18CD060C13FEB1F0007FC6BF /* Utility */,
+				188C2C9713FEB03200B29F22 /* MainWindow.xib */,
+				188C2C9813FEB03200B29F22 /* TelesocialSDKDemoViewController.xib */,
+				188C2C9913FEB03200B29F22 /* TelesocialSDKDemoAppDelegate.h */,
+				188C2C9A13FEB03200B29F22 /* TelesocialSDKDemoAppDelegate.m */,
+				188C2C9B13FEB03200B29F22 /* TelesocialSDKDemoViewController.h */,
+				188C2C9C13FEB03200B29F22 /* TelesocialSDKDemoViewController.m */,
+				188C2C9D13FEB03200B29F22 /* NetworkListViewController.h */,
+				188C2C9E13FEB03200B29F22 /* NetworkListViewController.m */,
+				188C2C9F13FEB03200B29F22 /* NetworkDetailViewController.h */,
+				188C2CA013FEB03200B29F22 /* NetworkDetailViewController.m */,
+				188C2CA113FEB03200B29F22 /* MediaListViewController.h */,
+				188C2CA213FEB03200B29F22 /* MediaListViewController.m */,
+				188C2CA313FEB03200B29F22 /* MediaDetailViewController.h */,
+				188C2CA413FEB03200B29F22 /* MediaDetailViewController.m */,
+				188C2CA513FEB03200B29F22 /* ConferenceListViewController.h */,
+				188C2CA613FEB03200B29F22 /* ConferenceListViewController.m */,
+				188C2CA713FEB03200B29F22 /* ConferenceDetailViewController.h */,
+				188C2CA813FEB03200B29F22 /* ConferenceDetailViewController.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		18CD05F713FEB1CE007FC6BF /* TelesocialSDK */ = {
+			isa = PBXGroup;
+			children = (
+				18CD05F813FEB1CE007FC6BF /* libTelesocialSDK.a */,
+				18CD05F913FEB1CE007FC6BF /* TelesocialSDK.h */,
+				18CD05FA13FEB1CE007FC6BF /* TSMediaInfo.h */,
+				18CD05FB13FEB1CE007FC6BF /* TSRestClient.h */,
+				18CD05FC13FEB1CE007FC6BF /* TSRestClientDelegate.h */,
+				18CD05FD13FEB1CE007FC6BF /* TSStatus.h */,
+			);
+			path = TelesocialSDK;
+			sourceTree = "<group>";
+		};
+		18CD060C13FEB1F0007FC6BF /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				18CD060D13FEB1F0007FC6BF /* Utility.h */,
+				18CD060E13FEB1F0007FC6BF /* Utility.m */,
+				18CD060F13FEB1F0007FC6BF /* Settings.h */,
+				18CD061013FEB1F0007FC6BF /* Settings.m */,
+				18CD061113FEB1F0007FC6BF /* TextEntryViewController.h */,
+				18CD061213FEB1F0007FC6BF /* TextEntryViewController.m */,
+				18CD061313FEB1F0007FC6BF /* ItemPickerViewController.h */,
+				18CD061413FEB1F0007FC6BF /* ItemPickerViewController.m */,
+			);
+			name = Utility;
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1D6058910D05DD3D006BFB54 /* TelesocialSDKDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
+			isa = PBXGroup;
+			children = (
+				18CD05F713FEB1CE007FC6BF /* TelesocialSDK */,
+				080E96DDFE201D6D7F000001 /* Classes */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = CustomTemplate;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				32CA4F630368D1EE00C91783 /* TelesocialSDKDemo_Prefix.pch */,
+				29B97316FDCFA39411CA2CEA /* main.m */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				188C2C9113FEAFF300B29F22 /* itunesArtwork */,
+				188C2C9213FEAFF300B29F22 /* icon.png */,
+				188C2C9313FEAFF300B29F22 /* icon@2x.png */,
+				8D1107310486CEB800E47090 /* TelesocialSDKDemo-Info.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
+				1D30AB110D05D00D00671497 /* Foundation.framework */,
+				288765A40DF7441C002DB57D /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1D6058900D05DD3D006BFB54 /* TelesocialSDKDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "TelesocialSDKDemo" */;
+			buildPhases = (
+				1D60588D0D05DD3D006BFB54 /* Resources */,
+				1D60588E0D05DD3D006BFB54 /* Sources */,
+				1D60588F0D05DD3D006BFB54 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TelesocialSDKDemo;
+			productName = TelesocialSDKDemo;
+			productReference = 1D6058910D05DD3D006BFB54 /* TelesocialSDKDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "TelesocialSDKDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
+			mainGroup = 29B97314FDCFA39411CA2CEA /* CustomTemplate */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1D6058900D05DD3D006BFB54 /* TelesocialSDKDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1D60588D0D05DD3D006BFB54 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				188C2C9413FEAFF300B29F22 /* itunesArtwork in Resources */,
+				188C2C9513FEAFF300B29F22 /* icon.png in Resources */,
+				188C2C9613FEAFF300B29F22 /* icon@2x.png in Resources */,
+				188C2CA913FEB03200B29F22 /* MainWindow.xib in Resources */,
+				188C2CAA13FEB03200B29F22 /* TelesocialSDKDemoViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1D60588E0D05DD3D006BFB54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
+				188C2CAB13FEB03200B29F22 /* TelesocialSDKDemoAppDelegate.m in Sources */,
+				188C2CAC13FEB03200B29F22 /* TelesocialSDKDemoViewController.m in Sources */,
+				188C2CAD13FEB03200B29F22 /* NetworkListViewController.m in Sources */,
+				188C2CAE13FEB03200B29F22 /* NetworkDetailViewController.m in Sources */,
+				188C2CAF13FEB03200B29F22 /* MediaListViewController.m in Sources */,
+				188C2CB013FEB03200B29F22 /* MediaDetailViewController.m in Sources */,
+				188C2CB113FEB03200B29F22 /* ConferenceListViewController.m in Sources */,
+				188C2CB213FEB03200B29F22 /* ConferenceDetailViewController.m in Sources */,
+				18CD061513FEB1F0007FC6BF /* Utility.m in Sources */,
+				18CD061613FEB1F0007FC6BF /* Settings.m in Sources */,
+				18CD061713FEB1F0007FC6BF /* TextEntryViewController.m in Sources */,
+				18CD061813FEB1F0007FC6BF /* ItemPickerViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1D6058940D05DD3E006BFB54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = TelesocialSDKDemo_Prefix.pch;
+				INFOPLIST_FILE = "TelesocialSDKDemo-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/TelesocialSDK\"",
+				);
+				PRODUCT_NAME = TelesocialSDKDemo;
+			};
+			name = Debug;
+		};
+		1D6058950D05DD3E006BFB54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = TelesocialSDKDemo_Prefix.pch;
+				INFOPLIST_FILE = "TelesocialSDKDemo-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/TelesocialSDK\"",
+				);
+				PRODUCT_NAME = TelesocialSDKDemo;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PREBINDING = NO;
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "TelesocialSDKDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D6058940D05DD3E006BFB54 /* Debug */,
+				1D6058950D05DD3E006BFB54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "TelesocialSDKDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}

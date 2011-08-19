@@ -1,0 +1,6 @@
+build
+BitmouthSDK.xcodeproj/project.xcworkspace
+BitmouthSDK.xcodeproj/xcuserdata
+*.mode1v3
+*.pbxuser
+
