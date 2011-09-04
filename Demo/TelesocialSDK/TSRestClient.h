@@ -2,8 +2,8 @@
 //  TSRestClient.h
 //  BitmouthSDK
 //
-//  Created by Anton Minin on 8/2/11.
-//  Copyright 2011 UMITI. All rights reserved.
+//  Created on 8/2/11.
+//  Copyright 2011 Telesocial. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -191,7 +191,14 @@
 @property (nonatomic, retain) NSString* serviceUrl;
 @property (nonatomic, assign) id<TSRestClientDelegate> delegate;
 
-
+/**
+ Upload an mp3 file to the server. 
+ 
+ @param data            Data to upload. Only MP3 files are supported.
+ @param grantCode       The grant code previously created via TSRestClient::requestUploadGrantCodeForMedia: method
+ 
+*/
+ - (void) uploadData:(NSData*) data withGrantCode:(NSString*) grantCode;
 
 
 /**

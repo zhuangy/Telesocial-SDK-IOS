@@ -2,8 +2,8 @@
 //  TSRestClientDelegate.h
 //  BitmouthSDK
 //
-//  Created by Anton Minin on 8/2/11.
-//  Copyright 2011 UMITI. All rights reserved.
+//  Created on 8/2/11.
+//  Copyright 2011 Telesocial. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
@@ -212,5 +212,14 @@
 	kBMStatusNotFound (404)		- The registrant with the specified network ID does not exist.<br><br>
  */
 - (void) restClient:(TSRestClient*) client didReceiveStatus:(TSStatus*) status forNetwork:(NSString*) networkId;
+
+/**
+ 
+ Sent when the client has finished uploading data to the server (TSRestClient::uploadData:withGrantCode: method)
+ @param client		The client sending the message. 
+ @param urlString   URL of the uploaded file if operation succeeded, else nil.
+ @param status      The outcome of the operation.
+ */
+- (void) restClient:(TSRestClient*) client didUploadToUrl:(NSString*) urlString status:(TSStatus*) status;
 
 @end

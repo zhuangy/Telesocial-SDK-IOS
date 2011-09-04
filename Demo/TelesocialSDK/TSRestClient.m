@@ -2,8 +2,8 @@
 //  TSRestClient.m
 //  BitmouthSDK
 //
-//  Created on 8/2/11.
-//  Copyright 2011 Telesocial. All rights reserved.
+//  Created by Anton Minin on 8/2/11.
+//  Copyright 2011 UMITI. All rights reserved.
 //
 
 #import "TSRestClient.h"
@@ -161,24 +161,16 @@ static TSRestClient* defaultClient;
     
     NSMutableURLRequest* request= [[[NSMutableURLRequest alloc] init] autorelease];
     [request setURL:[NSURL URLWithString:urlString]];
-    [request setHTTPMethod:@"POST"];                  
-    NSString *boundary = @"---------------------------98239487509817209384798723495";
+    [request setHTTPMethod:@"POST"];
+    NSString *boundary = @"---------------------------14737809831466499882746641449";
     NSString *contentType = [NSString stringWithFormat:@"multipart/form-data; boundary=%@",boundary];
     [request addValue:contentType forHTTPHeaderField: @"Content-Type"];
     NSMutableData *postbody = [NSMutableData data];
-    [postbody appendData:[[NSString stringWithFormat:@"--%@\r\n",boundary] dataUsingEncoding:NSUTF8StringEncoding]];
-    [postbody appendData:[[NSString stringWithFormat:@"Content-Disposition: form-data; name=\"mediafile\"; filename=\"upload.mp3\"\r\n"] dataUsingEncoding:NSUTF8StringEncoding]];
-    [postbody appendData:[[NSString stringWithString:@"Content-Type: audio/mpeg\r\n\r\n"] dataUsingEncoding:NSUTF8StringEncoding]];
-    [postbody appendData:data];
     [postbody appendData:[[NSString stringWithFormat:@"\r\n--%@\r\n",boundary] dataUsingEncoding:NSUTF8StringEncoding]];
-
-    [postbody appendData:[[NSString stringWithFormat:@"Content-Disposition: form-data; name=\"grant\"\r\n\r\n"] dataUsingEncoding:NSUTF8StringEncoding]];
-    [postbody appendData:[grantCode dataUsingEncoding:NSUTF8StringEncoding]];
+    [postbody appendData:[[NSString stringWithFormat:@"Content-Disposition: form-data; name=\"userfile\"; filename=\"upload.mp3\"\r\n"] dataUsingEncoding:NSUTF8StringEncoding]];
+    [postbody appendData:[[NSString stringWithString:@"Content-Type: application/octet-stream\r\n\r\n"] dataUsingEncoding:NSUTF8StringEncoding]];
+    [postbody appendData:data];
     [postbody appendData:[[NSString stringWithFormat:@"\r\n--%@--\r\n",boundary] dataUsingEncoding:NSUTF8StringEncoding]];
-    
-   	[request setValue:[NSString stringWithFormat:@"%d", [postbody length]] forHTTPHeaderField:@"Content-Length"];
-
-    
     [request setHTTPBody:postbody];
     
     TSRestOperation* operation=[TSRestOperation operationWithRequest:request target:self action:@selector(uploadComplete:)];
@@ -186,12 +178,7 @@ static TSRestClient* defaultClient;
 }
 
 - (void) uploadComplete:(TSRestOperation*) operation {
-	TSStatus* status = operation.status;
-	
-	if ([(id) delegate respondsToSelector:@selector(restClient:didUploadToUrl:status:)]) {
-        NSString* urlString = [status isOk] ? operation.dataString : nil;
-		[delegate restClient:self didUploadToUrl:urlString status:status];
-	}
+    NSLog(@"upload complete: %@", operation.status);
 }
 
 

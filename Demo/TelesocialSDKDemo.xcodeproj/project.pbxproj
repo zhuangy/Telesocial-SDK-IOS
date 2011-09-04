@@ -27,6 +27,7 @@
 		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
+		22AB2EAD1413667800FEB569 /* sample.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 22AB2EAC1413667800FEB569 /* sample.mp3 */; };
 		288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
 /* End PBXBuildFile section */
 
@@ -68,6 +69,7 @@
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1D6058910D05DD3D006BFB54 /* TelesocialSDKDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TelesocialSDKDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		22AB2EAC1413667800FEB569 /* sample.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sample.mp3; sourceTree = "<group>"; };
 		288765A40DF7441C002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* TelesocialSDKDemo_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TelesocialSDKDemo_Prefix.pch; sourceTree = "<group>"; };
@@ -176,6 +178,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				22AB2EAC1413667800FEB569 /* sample.mp3 */,
 				188C2C9213FEAFF300B29F22 /* icon.png */,
 				188C2C9313FEAFF300B29F22 /* icon@2x.png */,
 				8D1107310486CEB800E47090 /* TelesocialSDKDemo-Info.plist */,
@@ -246,6 +249,7 @@
 				188C2C9613FEAFF300B29F22 /* icon@2x.png in Resources */,
 				188C2CA913FEB03200B29F22 /* MainWindow.xib in Resources */,
 				188C2CAA13FEB03200B29F22 /* TelesocialSDKDemoViewController.xib in Resources */,
+				22AB2EAD1413667800FEB569 /* sample.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -279,6 +283,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Anton Minin (H4XY2QEC65)";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -290,6 +295,7 @@
 					"\"$(SRCROOT)/TelesocialSDK\"",
 				);
 				PRODUCT_NAME = TelesocialSDKDemo;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "C2144C2F-CB51-4E9B-A8F7-CDE4BB45D8FA";
 			};
 			name = Debug;
 		};

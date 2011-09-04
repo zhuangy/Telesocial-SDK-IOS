@@ -2,8 +2,8 @@
 //  BMMediaInfo.h
 //  BitmouthSDK
 //
-//  Created by Anton Minin on 8/2/11.
-//  Copyright 2011 UMITI. All rights reserved.
+//  Created on 8/2/11.
+//  Copyright 2011 Telesocial. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>

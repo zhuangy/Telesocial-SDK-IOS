@@ -2,8 +2,8 @@
 //  MediaDetailViewController.m
 //  TelesocialSDK
 //
-//  Created by Anton Minin on 8/10/11.
-//  Copyright 2011 UMITI. All rights reserved.
+//  Created on 8/10/11.
+//  Copyright 2011 Telesocial. All rights reserved.
 //
 
 #import "MediaDetailViewController.h"
@@ -24,7 +24,7 @@
 					  [Utility cellWithTitle:@"Status" tag:kBMCommandMediaStatus action:YES reuseIdentifier:@""],
 					  [Utility cellWithTitle:@"Record" tag:kBMCommandRecordMedia action:YES reuseIdentifier:@""],
 					  [Utility cellWithTitle:@"Blast" tag:kBMCommandBlastMedia action:YES reuseIdentifier:@""],
-					  [Utility cellWithTitle:@"Request Upload Grant" tag:kBMCommandRequestUpload action:YES reuseIdentifier:@""],
+					  [Utility cellWithTitle:@"Upload MP3" tag:kBMCommandRequestUpload action:YES reuseIdentifier:@""],
 					  [Utility cellWithTitle:@"Remove" tag:kBMCommandRemoveMedia action:YES reuseIdentifier:@""],
 					  nil];
 		self.title = mediaId;
@@ -85,6 +85,7 @@
 			break;
 		case kBMCommandRequestUpload:
 			[Utility showActivityIndicator];
+
 			[[TSRestClient defaultClient] requestUploadGrantForMedia:currentMediaId];
 			break;
 
@@ -150,12 +151,22 @@
 }
 
 - (void) restClient:(TSRestClient *)client didReceiveUploadGrant:(NSString *)grantId withStatus:(TSStatus *)status {
-	[Utility hideActivityIndicator];
+
 	if (status.code == kBMStatusCreated) {
-		[Utility alert:@"The grant code has been allocated: %@", grantId];
+        [[TSRestClient defaultClient] uploadData:[NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"sample" ofType:@"mp3"]] withGrantCode:grantId];
 	} else {
+        [Utility hideActivityIndicator];    
 		[Utility alert:@"Failed to allocate upload grant code. Status: %@", status];
 	}
+}
+
+- (void)restClient:(TSRestClient *)client didUploadToUrl:(NSString *)urlString status:(TSStatus *)status {
+	[Utility hideActivityIndicator];    
+    if ([status isOk]) {
+        [Utility alert:@"Upload complete, media URL is %@", urlString];
+    } else {
+        [Utility alert:@"Upload failed with status %@", status];
+   }
 }
 
 @end
