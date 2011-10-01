@@ -31,6 +31,16 @@
 		 withStatus:(TSStatus*) status;
 
 /**
+ Sent when the client has finished executing TSRestClient::changeRegisteredNetworkId:phone: call.
+ 
+ @param client		The client sending the message. 
+ @param networkId   ID of the network or nil, if registration has failed.
+ @param status      Status of the operation. <br><br>
+ */
+
+- (void) restClient:(TSRestClient*) client didChangeRegisteredNetworkId:(NSString*) networkId withStatus:(TSStatus*) status;
+
+/**
  Sent when the client has finished executing TSRestClient::createConference:record: call.
  
  @param client			The client sending the message.
@@ -54,6 +64,17 @@
  */ 
 - (void) restClient:(TSRestClient*) client didCreateMedia:(TSMediaInfo*) mediaInfo
          withStatus:(TSStatus*) status;
+
+/**
+ Sent when the client has finished executing TSRestClient::getMediaIds call.
+
+ @param client			The client sending the message.
+ @param status			Status of the operation.
+ @param recorded		Array of recoeded media IDs.
+ @param uploaded		Array of uploaded media IDs.
+ */
+- (void) restClient:(TSRestClient*) client didReceiveMediaIdsWithStatus:(TSStatus*) status
+		   recorded:(NSArray*) recorded uploaded:(NSArray*) uploaded;
 
 /**
  Sent when the client has finished executing TSRestClient::recordMedia:network: call.

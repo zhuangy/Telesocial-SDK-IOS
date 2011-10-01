@@ -47,6 +47,17 @@
 - (void) registerNetworkId:(NSString*) networkId phone:(NSString*) phone;
 
 /**
+ This method changes the phone number associated with a previously-registered networkid.
+ 
+ @param networkId	The network ID to be changed.
+ @param phone		The phone number that the networkid will become associated with.
+ 
+ @see TSRestClientDelegate::restClient:didChangeRegisteredNetworkId:status:
+ */
+- (void) changeRegisteredNetworkId:(NSString*) networkId phone:(NSString*) phone;
+
+
+/**
  This method creates a conference call with two or more participants.
  
  @param networkId	The network ID of the conference leader.
@@ -69,6 +80,13 @@
  @see TSRestClientDelegate::restClient:didCreateMedia:withStatus:
  */
 - (void) createMedia;
+
+/**
+ This method retrieves all media IDs for an application.
+ 
+ @see TSRestClientDelegate::restClient:didReceiveMediaIdsWithStatus:recorded:uploaded:
+ */
+- (void) getMediaIds;
 
 /**
  This method causes the specified networkId to be called and played a 
@@ -207,6 +225,8 @@
  @returns The default BRRestClient object for the system.
  */
 + (TSRestClient*) defaultClient;
+
+
 
 
 @end

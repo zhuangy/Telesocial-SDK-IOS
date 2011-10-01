@@ -27,6 +27,7 @@
 					  [Utility cellWithTitle:@"Register" tag:kCommandNetworkRegister action:YES reuseIdentifier:@""],
 					  [Utility cellWithTitle:@"Get Status - Check if Exists" tag:kCommandNetworkStatus action:YES reuseIdentifier:@""],
   					  [Utility cellWithTitle:@"Get Status - Check if Related" tag:kCommandNetworkStatusRelated action:YES reuseIdentifier:@""],
+					  [Utility cellWithTitle:@"Change phone number" tag:kCommandChangePhoneNumber action:YES reuseIdentifier:@""],
 					  [Utility cellWithTitle:@"Remove from the List" tag:kCommandRemoveFromList action:YES reuseIdentifier:@""],
 					  nil];
     }
@@ -87,6 +88,19 @@
 			[Utility showActivityIndicator];
 			[[TSRestClient defaultClient] getRegistrationStatus:currentNetworkId checkRelated:YES];
 			break;		
+		case kCommandChangePhoneNumber: {
+			TextEntryViewController* textEntry =[TextEntryViewController 
+												 textEntryWithTitle:@"New phone number"
+												 placeholderText:@"1234567890"
+												 initialValue:@""
+												 validationMessage:@"Please provide phone number"
+												 target:self
+												 action:@selector(phoneNumberToChangeEntryComplete:)];
+			textEntry.textField.keyboardType = UIKeyboardTypePhonePad;
+			[self.navigationController pushViewController:textEntry animated:YES];
+			
+			break;
+		}			
 		case kCommandRemoveFromList:
 			[Utility confirmTarget:self action:@selector(removeCurrentNetwork) message:@"Remove network '%@' from the list?", currentNetworkId];
 
@@ -104,6 +118,17 @@
 	[self.navigationController popViewControllerAnimated:YES];
 	[Utility showActivityIndicator];
 	[[TSRestClient defaultClient] registerNetworkId:currentNetworkId phone:textEntry.textField.text];
+}
+
+- (void) phoneNumberToChangeEntryComplete:(TextEntryViewController*) textEntry {
+	[self.navigationController popViewControllerAnimated:YES];
+	[Utility showActivityIndicator];
+	[[TSRestClient defaultClient] changeRegisteredNetworkId:currentNetworkId phone:textEntry.textField.text];
+}
+
+- (void) restClient:(TSRestClient *)client didChangeRegisteredNetworkId:(NSString *)networkId withStatus:(TSStatus *)status {
+	[Utility hideActivityIndicator];
+	[Utility alert:@"Network '%@' phone number change completed with status %@", networkId, status];
 }
 
 - (void) restClient:(TSRestClient *)client didReceiveStatus:(TSStatus *)status forNetwork:(NSString *)networkId {

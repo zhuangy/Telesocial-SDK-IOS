@@ -12,13 +12,15 @@
 @implementation MediaListViewController
 @synthesize mediaList;
 @synthesize createMediaCell;
+@synthesize listMediaCell;
 
 - (id) init {
 
 	self = [super initWithStyle:UITableViewStyleGrouped];
 	if (self) {
 		self.mediaList = [NSMutableArray arrayWithArray:[[Settings sharedSettings] loadMediaList]];
-		self.createMediaCell = [Utility cellWithTitle:@"Create Media" tag:0 action:YES reuseIdentifier:@""];
+		self.createMediaCell = [Utility cellWithTitle:@"Create Media" tag:kCommandMediaListAdd action:YES reuseIdentifier:@""];
+		self.listMediaCell = [Utility cellWithTitle:@"List Media" tag:kCommandMediaListList action:YES reuseIdentifier:@""];
 		self.title = @"Media List";
 		
 		[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleRemoveMedia:) name:kBMNotificationRemoveMedia object:nil];
@@ -51,7 +53,7 @@
 
 - (NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 	if (section == 1) {
-		return 1;
+		return 2;
 	} else {
 		return [mediaList count];
 	}
@@ -59,7 +61,11 @@
 
 - (UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
 	if (indexPath.section == 1) {
-		return createMediaCell;
+		if (indexPath.row == 0) {
+			return createMediaCell;
+		} else {
+			return listMediaCell;
+		}
 	}
 	
     static NSString *cellIdentifier = @"mediaCell";
@@ -79,11 +85,38 @@
 	[TSRestClient defaultClient].delegate = self;
 	
 	if (indexPath.section == 1) {
-		[Utility showActivityIndicator];
-		[[TSRestClient defaultClient] createMedia];
+		UITableViewCell* cell = [tableView cellForRowAtIndexPath:indexPath];
+		switch (cell.tag) {
+			case kCommandMediaListAdd:
+				[Utility showActivityIndicator];
+				[[TSRestClient defaultClient] createMedia];
+				break;
+			case kCommandMediaListList:
+				[Utility showActivityIndicator];
+				[[TSRestClient defaultClient] getMediaIds];
+				break;
+			default:
+				break;
+		}
 	} else {
 		NSString* mediaId = [mediaList objectAtIndex:indexPath.row];
 		[self.navigationController pushViewController:[[[MediaDetailViewController alloc] initWithMediaId:mediaId] autorelease] animated:YES];
+	}
+}
+
+- (void) restClient:(TSRestClient *)client didReceiveMediaIdsWithStatus:(TSStatus *)status recorded:(NSArray *)recorded uploaded:(NSArray *)uploaded {
+	[Utility hideActivityIndicator];
+	
+	if ([status isOk]) {
+		[Utility alert:@"Status: %@", status];
+		[mediaList removeAllObjects];
+		NSLog(@"Class: %@", [recorded class]);
+		[mediaList addObjectsFromArray:recorded];
+		[mediaList addObjectsFromArray:uploaded];
+		[[Settings sharedSettings] saveMediaList:mediaList];
+		[self refreshMediaList];
+	} else {
+		[Utility alert:@"Failed to get media IDs: %@", status];
 	}
 }
 

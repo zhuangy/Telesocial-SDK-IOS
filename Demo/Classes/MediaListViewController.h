@@ -12,11 +12,15 @@
 #import "Utility.h"
 #import "MediaDetailViewController.h"
 
+#define kCommandMediaListAdd	1
+#define kCommandMediaListList	2
+
 @interface MediaListViewController : UITableViewController <TSRestClientDelegate>{
 
 }
 
 @property (nonatomic, retain) NSMutableArray* mediaList;
 @property (nonatomic, retain) UITableViewCell* createMediaCell;
+@property (nonatomic, retain) UITableViewCell* listMediaCell;
 
 @end

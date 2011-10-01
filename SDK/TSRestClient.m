@@ -240,6 +240,25 @@ static TSRestClient* defaultClient;
 	}
 }
 
+- (void) changeRegisteredNetworkId:(NSString *)networkId phone:(NSString *)phone {
+	[self invokeUri:[NSString stringWithFormat:@"/api/rest/registrant/%@/%@", networkId, phone]
+			 method:kBMMethodPOST
+		queryParams:nil
+		 postParams:[NSDictionary dictionaryWithObjectsAndKeys:
+					 self.applicationKey, @"appkey", nil]
+			 target:self 
+			 action:@selector(changeRegisteredNetworkIdComplete:)
+			 object:networkId];
+}
+
+- (void) changeRegisteredNetworkIdComplete:(TSRestOperation*) operation {
+	TSStatus* status = [TSStatus statusWithResponseDictionary:operation.parsedResponse];
+	
+	if ([(id)delegate respondsToSelector:@selector(restClient:didChangeRegisteredNetworkId:withStatus:)]) {
+		[delegate restClient:self didChangeRegisteredNetworkId:operation.object withStatus:status];
+	}
+}
+
 
 
 - (void) createConferenceWithNetwork:(NSString*) networkId greetingId:(NSString *)greetingId recordingId:(NSString *)recordingId {
@@ -319,6 +338,38 @@ static TSRestClient* defaultClient;
 		
 }
 
+- (void) getMediaIds {
+	[self invokeUri:@"api/rest/media"
+			 method:kBMMethodGET
+		queryParams:[NSDictionary dictionaryWithObjectsAndKeys:
+					 self.applicationKey, @"appkey", nil]
+		 postParams:nil
+			 target:self
+			 action:@selector(getMediaIdsComplete:)
+			 object:nil];
+	
+}
+
+- (void) getMediaIdsComplete:(TSRestOperation*) operation {
+	NSDictionary* tlo = [operation.parsedResponse objectForKey:@"MediaidListResponse"];
+	TSStatus* status = [TSStatus statusWithResponseDictionary:operation.parsedResponse];
+
+	NSArray* recorded = nil;
+	NSArray* uploaded = nil;
+	
+	if (tlo != nil) {
+		recorded = [tlo objectForKey:@"recorded"];
+		uploaded = [tlo objectForKey:@"uploaded"];
+	}
+	
+	if ([(id)delegate respondsToSelector:@selector(restClient:didReceiveMediaIdsWithStatus:recorded:uploaded:)]) {
+		[delegate restClient:self didReceiveMediaIdsWithStatus:status recorded:recorded uploaded:uploaded];
+	}
+	
+	
+	
+}
+
 - (void) recordMedia:(NSString *)mediaId network:(NSString *)networkId {
 	[self invokeUri:[NSString stringWithFormat:@"api/rest/media/%@", [mediaId stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]]
 			 method:kBMMethodPOST
@@ -331,6 +382,7 @@ static TSRestClient* defaultClient;
 			 action:@selector(recordMediaComplete:)
 			 object:networkId];
 }
+
 
 - (void) recordMediaComplete:(TSRestOperation*) operation {
 	NSDictionary* tlo = [operation.parsedResponse objectForKey:@"MediaResponse"];

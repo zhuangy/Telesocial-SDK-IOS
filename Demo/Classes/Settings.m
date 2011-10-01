@@ -41,7 +41,7 @@ static Settings* sharedSettings;
 }
 
 - (NSString *) serviceUrl {
-	return [self valueForKey:kBMServiceUrlKey defaultValue:@"http://api4.bitmouth.com"];
+	return [self valueForKey:kBMServiceUrlKey defaultValue:@"https://api.telesocial.com"];
 }
 
 - (void) setServiceUrl:(NSString *) value{

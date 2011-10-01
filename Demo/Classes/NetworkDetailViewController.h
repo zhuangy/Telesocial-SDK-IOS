@@ -16,6 +16,7 @@
 #define kCommandNetworkRegister			2
 #define kCommandRemoveFromList			3
 #define kCommandNetworkStatusRelated	4
+#define kCommandChangePhoneNumber		5
 
 #define kBMNotificationRemoveNetwork	@"notificationRemoveNetwork"
 
