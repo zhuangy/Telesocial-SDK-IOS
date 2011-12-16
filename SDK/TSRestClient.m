@@ -561,7 +561,7 @@ static TSRestClient* defaultClient;
 		queryParams:nil
 		 postParams:[NSDictionary dictionaryWithObjectsAndKeys:
 					 self.applicationKey, @"appkey", 
-					 @"hangul", @"action",					 
+					 @"hangup", @"action",					 
 					 nil]
 			 target:self
 			 action:@selector(hangupNetworkInConferenceComplete:)
